@@ -67,9 +67,3 @@ let mainFrame = new MainFrame('active');
 mainFrame.addTaskList();
 let addTaskListBtn = document.querySelector('.task-wrapper__add');
 addTaskListBtn.addEventListener('click', mainFrame.addTaskList.bind(mainFrame));
-
-document.querySelector('.task-list__add').addEventListener('click', e => {
-    
-    let name = prompt('enter task name: ');
-    
-});
