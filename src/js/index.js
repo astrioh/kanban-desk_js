@@ -19,11 +19,11 @@ class MainFrame {
                     <li><button class="add-btn task-list__add">+</button></li>
                 </ul>
             </div>`;
-        taskListEl.querySelector('.task-list__add').addEventListener('click', (e) => {
+        taskListEl.querySelector('.task-list__add').addEventListener('click', e => {
             let name = prompt('Enter task name: ');
-            taskList.addTask(name);
-            let taskEl = taskList.renderTaskEl(name);
-            e.currentTarget.before(taskEl);
+            let hook = e.currentTarget;
+
+            taskList.addTask(name, hook);
         });
         let renderHookBefore = document.querySelector('.task-wrapper__add');
         renderHookBefore.before(taskListEl);
@@ -36,22 +36,26 @@ class TaskList {
         this.type = type;
         this.tasks = [];
     }
-    addTask(name) {
-        let task = {
-            type: 'active',
-            name: name
-        };
+    addTask(name, hook) {
+        let task = new Task(name);
         this.tasks.push(task);
-
-        
+        task.renderTaskEl(hook);
     }
-    renderTaskEl(name) {
+    
+}
+
+class Task {
+    constructor(name) {
+        this.type = 'active';
+        this.name = name;
+    }
+    renderTaskEl(hook) {
         let taskEl = document.createElement('li');
         taskEl.innerHTML = `
             <li class="task-list__task">
                 <div>
-                    <input id="do-${name}" type="checkbox" class="task-list__check">
-                    <label for="do-${name}" class="task-list__description">${name}</label>
+                    <input id="do-${this.name}" type="checkbox" class="task-list__check">
+                    <label for="do-${this.name}" class="task-list__description">${this.name}</label>
                 </div>
                 <div>
                     <button>Edit</button>
@@ -59,7 +63,11 @@ class TaskList {
                 </div>
             </li>
         `;
-        return taskEl;
+        taskEl.querySelector('.task-list__check').addEventListener('click', e => {
+            this.type = 'finished';
+            e.currentTarget.parentNode.parentNode.remove();
+        });
+        hook.before(taskEl);
     }
 }
 
