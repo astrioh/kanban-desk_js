@@ -7,24 +7,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/index.css">
-    <script src="./js/index.js"></script>
+    <script src="./js/index.js" defer></script>
 </head>
 <body>
-   <!--  <header class="header">
-        <h1 class="header__title">To do list</h1>
-        <button class="header__add-button"><span>+</span> Add task</button>
-    </header>
-    <main class="main">
-        <div class="task-list task-list_active main__active-tasks">
-            <h2 class="task-list__title">Active tasks</h2>
-            <ul class="task-list__tasks">
-                <li><input id="do-dishes" checked type="checkbox" class="task-list__check"><label for="do-dishes" class="task-list__task">Do dishes</label></li>
-                <li><input id="do-dinner" checked type="checkbox" class="task-list__check"><label for="do-dinner" class="task-list__task">Do dinner</label></li>
-                <li><input id="do-bed" checked type="checkbox" class="task-list__check"><label for="do-bed" class="task-list__task">Do bed</label></li>
-            </ul>
-        </div>
-    </main> -->
-
     <main class="task-wrapper">
         <header class="task-wrapper__header">
             <h1 class="task-wrapper__title">To do list</h1>
@@ -90,8 +75,9 @@
                             <button>Del</button>
                         </div>
                     </li>
+                    <li><button class="add-btn task-list__add">+</button></li>
                 </ul>
-                <button class="add-btn task-list__add">+</button>
+                
             </div>
             <button class="add-btn task-wrapper__add">+</button>
         </div>
