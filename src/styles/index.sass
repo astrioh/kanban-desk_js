@@ -1,0 +1,134 @@
+*, *:before, *:after
+    box-sizing: border-box
+    font-family: 'Roboto', sans-serif
+
+.task-wrapper
+    margin: 30px auto
+    max-width: 960px
+    padding-top: 15px
+    border: 1px solid #00a9cf
+    border-radius: 5px
+    min-height: 80vh
+    &__header
+        display: flex
+        justify-content: center
+    &__title
+        margin: 0
+        text-transform: uppercase
+        font-weight: normal
+    &__switch
+        margin-left: 150px
+        display: flex
+        align-items: center
+    &__switch-btn
+        margin-right: 10px
+        width: 130px
+        height: 32px
+        border: 1px solid #00a9cf
+        border-radius: 3px
+        background: #fff
+        &:hover
+            cursor: pointer
+            background-color: #51c2db
+            color: #fff
+        &_selected
+            background: #00a9cf
+            color: #fff
+    &__main
+        display: flex
+        align-items: center
+        overflow-x: auto
+        overflow-y: hidden
+        min-height: 73vh
+        min-width: 100%
+        &::-webkit-scrollbar-track
+            border-radius: 10px
+            background-color: #F5F5F5
+        &::-webkit-scrollbar
+            width: 12px
+        &::-webkit-scrollbar-thumb
+            border-radius: 10px
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            background-color: #00a9cf
+    &__add
+        margin-left: 55px
+
+.add-btn
+    display: block
+    width: 75px
+    height: 75px
+    border: 3px solid #00a9cf
+    background: #fff
+    border-radius: 50%
+    font-size: 32px
+    color: #000
+    outline: none
+    &:hover
+        cursor: pointer
+        background-color: #00a9cf
+        color: #fff
+
+.task-list
+    min-width: 325px
+    margin-right: 25px
+    margin-left: 15px
+    border: 1px solid #00a9cf
+    border-radius: 5px
+    &__header
+        border-bottom: 1px solid #00a9cf
+        padding: 5px 15px
+        display: flex
+        justify-content: space-between
+    &__title
+        margin: 0
+    &__edit
+        width: 25px
+        height: 25px
+    &__tasks
+        max-height: 450px
+        margin: 0
+        list-style: none
+        padding: 15px
+        overflow: auto
+        &::-webkit-scrollbar-track
+            border-radius: 10px
+            background-color: #F5F5F5
+        &::-webkit-scrollbar
+            width: 12px
+        &::-webkit-scrollbar-thumb
+            border-radius: 10px
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            background-color: #00a9cf
+    &__task
+        background-color: #fff
+        margin-top: 10px
+        height: 50px
+        font-size: 18px
+        line-height: 50px
+        border: 1px solid #b5b9ba
+        border-radius: 5px
+        display: flex
+        justify-content: space-between
+        padding: 0 10px
+    &__description::before
+        content: ''
+        display: inline-block
+        width: 30px
+        height: 30px
+        vertical-align: middle
+        border-radius: 50%
+        border: 1px solid green
+        margin-right: 10px
+    &__check
+        display: none
+        &:checked + .task-list__description::before
+            content: ''
+            background-size: 100%
+            background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0MjYuNjY3IDQyNi42NjciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQyNi42NjcgNDI2LjY2NzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxwYXRoIHN0eWxlPSJmaWxsOiM2QUMyNTk7IiBkPSJNMjEzLjMzMywwQzk1LjUxOCwwLDAsOTUuNTE0LDAsMjEzLjMzM3M5NS41MTgsMjEzLjMzMywyMTMuMzMzLDIxMy4zMzMgIGMxMTcuODI4LDAsMjEzLjMzMy05NS41MTQsMjEzLjMzMy0yMTMuMzMzUzMzMS4xNTcsMCwyMTMuMzMzLDB6IE0xNzQuMTk5LDMyMi45MThsLTkzLjkzNS05My45MzFsMzEuMzA5LTMxLjMwOWw2Mi42MjYsNjIuNjIyICBsMTQwLjg5NC0xNDAuODk4bDMxLjMwOSwzMS4zMDlMMTc0LjE5OSwzMjIuOTE4eiIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K)
+    &__add
+        width: 35px
+        height: 35px
+        margin: 5px auto
+        line-height: 25px
+    &_active
+

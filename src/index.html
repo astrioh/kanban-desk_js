@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./js/index.js"></script>
+</head>
+<body>
+   <!--  <header class="header">
+        <h1 class="header__title">To do list</h1>
+        <button class="header__add-button"><span>+</span> Add task</button>
+    </header>
+    <main class="main">
+        <div class="task-list task-list_active main__active-tasks">
+            <h2 class="task-list__title">Active tasks</h2>
+            <ul class="task-list__tasks">
+                <li><input id="do-dishes" checked type="checkbox" class="task-list__check"><label for="do-dishes" class="task-list__task">Do dishes</label></li>
+                <li><input id="do-dinner" checked type="checkbox" class="task-list__check"><label for="do-dinner" class="task-list__task">Do dinner</label></li>
+                <li><input id="do-bed" checked type="checkbox" class="task-list__check"><label for="do-bed" class="task-list__task">Do bed</label></li>
+            </ul>
+        </div>
+    </main> -->
+
+    <main class="task-wrapper">
+        <header class="task-wrapper__header">
+            <h1 class="task-wrapper__title">To do list</h1>
+            <div class="task-wrapper__switch">
+                <button class="task-wrapper__switch-btn task-wrapper__switch-btn_selected">Active</button>
+                <button class="task-wrapper__switch-btn">Finished</button>
+            </div>
+        </header>
+        <div class="task-wrapper__main">
+            <div class="task-list task-list_active">
+                <div class="task-list__header">
+                    <h2 class="task-list__title">Sample name</h2>
+                    <img class="task-list__edit" src="./img/edit.png" alt="edit">
+                </div>
+                <ul class="task-list__tasks">
+                    <li class="task-list__task">
+                        <div>
+                            <input id="do-dishes" checked type="checkbox" class="task-list__check">
+                            <label for="do-dishes" class="task-list__description">Do bed</label>
+                        </div>
+                        <div>
+                            <button>Edit</button>
+                            <button>Del</button>
+                        </div>
+                    </li>
+                    <li class="task-list__task">
+                        <div>
+                            <input id="do-dishes" checked type="checkbox" class="task-list__check">
+                            <label for="do-dishes" class="task-list__description">Do dishes</label>
+                        </div>
+                        <div>
+                            <button>Edit</button>
+                            <button>Del</button>
+                        </div>
+                    </li>
+                    <li class="task-list__task">
+                        <div>
+                            <input id="do-dishes" checked type="checkbox" class="task-list__check">
+                            <label for="do-dishes" class="task-list__description">Do dishes</label>
+                        </div>
+                        <div>
+                            <button>Edit</button>
+                            <button>Del</button>
+                        </div>
+                    </li>
+                    <li class="task-list__task">
+                        <div>
+                            <input id="do-dishes" checked type="checkbox" class="task-list__check">
+                            <label for="do-dishes" class="task-list__description">Do dishes</label>
+                        </div>
+                        <div>
+                            <button>Edit</button>
+                            <button>Del</button>
+                        </div>
+                    </li>
+                    <li class="task-list__task">
+                        <div>
+                            <input id="do-dishes" checked type="checkbox" class="task-list__check">
+                            <label for="do-dishes" class="task-list__description">Do dishes</label>
+                        </div>
+                        <div>
+                            <button>Edit</button>
+                            <button>Del</button>
+                        </div>
+                    </li>
+                </ul>
+                <button class="add-btn task-list__add">+</button>
+            </div>
+            <button class="add-btn task-wrapper__add">+</button>
+        </div>
+    </main>
+</body>
+</html>
