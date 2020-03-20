@@ -6,7 +6,7 @@
 
 .task-wrapper {
   margin: 30px auto;
-  max-width: 960px;
+  max-width: 1280px;
   padding-top: 15px;
   border: 1px solid #00a9cf;
   border-radius: 5px;
@@ -87,13 +87,16 @@
 }
 
 .task-wrapper__add {
+  -webkit-box-ordinal-group: 51;
+      -ms-flex-order: 50;
+          order: 50;
   margin-left: 55px;
+  min-width: 75px;
+  min-height: 75px;
 }
 
 .add-btn {
   display: block;
-  width: 75px;
-  height: 75px;
   border: 3px solid #00a9cf;
   background: #fff;
   border-radius: 50%;
@@ -109,15 +112,21 @@
 }
 
 .task-list {
-  min-width: 325px;
+  min-width: 395px;
   margin-right: 25px;
   margin-left: 15px;
-  border: 1px solid #00a9cf;
   border-radius: 5px;
 }
 
+.task-list_active {
+  border: 1px solid #00a9cf;
+}
+
+.task-list_finished {
+  border: 1px solid #6b6f70;
+}
+
 .task-list__header {
-  border-bottom: 1px solid #00a9cf;
   padding: 5px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,6 +134,14 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.task-list__header_active {
+  border-bottom: 1px solid #00a9cf;
+}
+
+.task-list__header_finished {
+  border-bottom: 1px solid #6b6f70;
 }
 
 .task-list__title {
@@ -140,7 +157,7 @@
   max-height: 450px;
   margin: 0;
   list-style: none;
-  padding: 15px;
+  padding: 0 15px;
   overflow: auto;
 }
 
@@ -160,8 +177,7 @@
 }
 
 .task-list__task {
-  background-color: #fff;
-  margin-top: 10px;
+  margin: 10px 0;
   height: 50px;
   font-size: 18px;
   line-height: 50px;
@@ -174,6 +190,14 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 10px;
+}
+
+.task-list__task_active {
+  background-color: #fff;
+}
+
+.task-list__task_finished {
+  background-color: #909394;
 }
 
 .task-list__description::before {
@@ -200,7 +224,7 @@
 .task-list__add {
   width: 35px;
   height: 35px;
-  margin: 5px auto;
+  margin: 10px auto;
   line-height: 25px;
 }
 /*# sourceMappingURL=index.css.map */
