@@ -3,6 +3,7 @@ class MainFrame {
         this.type = type;
         this.taskLists = [];
     }
+    
     addTaskList(type) {
         let taskList = new TaskList(type);
         this.taskLists.push(taskList);
