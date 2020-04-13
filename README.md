@@ -1,1 +1,1 @@
-# todolist_js
+# simple kanban-desk
